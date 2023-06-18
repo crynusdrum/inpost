@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tb.inpost.InpostApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.944 s - in com.tb.inpost.InpostApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.397 s - in com.tb.inpost.InpostApplicationTests

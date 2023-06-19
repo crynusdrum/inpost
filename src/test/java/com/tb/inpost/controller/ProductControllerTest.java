@@ -25,15 +25,12 @@ class ProductControllerTest {
 
     @Test
     void calculatePriceAmount_Returns200() {
-        // Arrange
+ 
         ProductController controller = new ProductController(productService);
         UUID productId = UUID.randomUUID();
-       // CalculateRequestDto requestDto = new CalculateRequestDto(5); // Example amount
+
         ProductRequestDTO requestDto = new ProductRequestDTO();
         requestDto.setAmount(5);
-
-        // Mocking product and service behavior
-        //Product product = new Product("Product 1", 100.0);
         
         ResponseEntity<ProductResponseDTO> responseDTO = new ResponseEntity<ProductResponseDTO>(HttpStatusCode.valueOf(200));
         

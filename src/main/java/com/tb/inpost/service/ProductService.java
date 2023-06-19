@@ -7,7 +7,6 @@ import java.util.UUID;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.tb.inpost.dto.PriceAmountDtoChat;
 import com.tb.inpost.dto.ProductRequestDTO;
 import com.tb.inpost.dto.ProductResponseDTO;
 import com.tb.inpost.model.Product;
@@ -47,18 +46,17 @@ public class ProductService {
             return ResponseEntity.notFound().build();
         }
 
-        // Apply count-based discount
-        double totalPrice = product.getPrice() * productRequestDTO.getAmount();
-        double discount = calculateCountBasedDiscount(product, productRequestDTO.getAmount());
-        totalPrice -= discount;
+        // Applying count Based Discount Policy
+        Double totalPrice = product.getPrice() * productRequestDTO.getAmount();
+        Double discount = countBasedDiscountPolicy(product, productRequestDTO.getAmount());
 
-        // Apply percentage-based discount
-        double percentageDiscount = calculatePercentageBasedDiscount(product);
-        totalPrice -= (totalPrice * percentageDiscount);
+        totalPrice = totalPrice - discount;
 
-//        PriceAmountDtoChat resultDto = new PriceAmountDtoChat(totalPrice, productRequestDTO.getAmount());
-//        return ResponseEntity.ok(resultDto);
-		
+        // Applying percentage Based Discount Policy
+        Double percentageDiscount = percentageBasedDiscountPolicy(product);
+
+        totalPrice = totalPrice - (totalPrice * percentageDiscount);
+
 		ProductResponseDTO productResponseDTO = new ProductResponseDTO();
 		
 		productResponseDTO.setName(product.getTitle());
@@ -69,21 +67,40 @@ public class ProductService {
 		
 		return ResponseEntity.ok(productResponseDTO);
 	}
+	
+	
+	/**
+	 * 
+	 * countBasedDiscountPolicy (the more pieces of the product are ordered, the bigger the discount is) 
+     * Example: Apply 5% discount for every 10 units purchased
+	 * 
+	 * 
+	 * @param product
+	 * @param amount
+	 * @return
+	 */
+	Double countBasedDiscountPolicy(Product product, Integer amount) {
 
-    private double calculateCountBasedDiscount(Product product, int amount) {
-        // Your count-based discount calculation logic here
-        // Example: Apply 5% discount for every 10 units purchased
-        int discountUnit = 10;
-        double discountPercentage = 0.05;
+    	Integer discountUnit = 10;
+        Double discountPercentage = 0.05;
 
         int discountQuantity = amount / discountUnit;
         return discountQuantity * (product.getPrice() * discountPercentage);
     }
+    
+    
+    /**
+     * 
+     * percentageBasedDiscountPolicy (discount basen on percentage)
+     * Example: 10%
+     * 
+     * 
+     * @param product
+     * @return
+     */
+	Double percentageBasedDiscountPolicy(Product product) {
 
-    private double calculatePercentageBasedDiscount(Product product) {
-        // Your percentage-based discount calculation logic here
-        // Example: Apply 10% discount for all products
-        double discountPercentage = 0.1;
+    	Double discountPercentage = 0.1;
         return discountPercentage;
     }
 

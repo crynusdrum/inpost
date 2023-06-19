@@ -1,0 +1,11 @@
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/controller/ProductController.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/model/Product.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/repository/ProductRepository.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/InpostApplication.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/dto/ProductRequestDTO.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/dto/CalculateRequestDtoChat.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/service/ProductService.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/dto/PriceAmountDtoChat.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/dto/ProductDtoChat.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/dto/ProductResponseDTO.java
+/Users/thiagobaldes/Documents/GitHub/inpost/src/main/java/com/tb/inpost/controller/ProductControllerChat.java

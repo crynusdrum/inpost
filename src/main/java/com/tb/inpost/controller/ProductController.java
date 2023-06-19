@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tb.inpost.dto.CalculateRequestDtoChat;
 import com.tb.inpost.dto.ProductRequestDTO;
 import com.tb.inpost.dto.ProductResponseDTO;
 import com.tb.inpost.model.Product;
@@ -41,12 +40,8 @@ public class ProductController {
 	public ResponseEntity<ProductResponseDTO> getProductCalculate(@PathVariable UUID productId,
 											@RequestBody ProductRequestDTO requestDto) {
 		
-		System.out.println(requestDto.getName());
-		
 		
 		return productService.getProductCalculate(productId, requestDto);
-
-		//return productService.getProductList();
 
 	}
 

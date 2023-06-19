@@ -1,0 +1,11 @@
+com/tb/inpost/dto/CalculateRequestDtoChat.class
+com/tb/inpost/dto/ProductResponseDTO.class
+com/tb/inpost/service/ProductService.class
+com/tb/inpost/controller/ProductController.class
+com/tb/inpost/InpostApplication.class
+com/tb/inpost/dto/PriceAmountDtoChat.class
+com/tb/inpost/controller/ProductControllerChat.class
+com/tb/inpost/dto/ProductRequestDTO.class
+com/tb/inpost/model/Product.class
+com/tb/inpost/repository/ProductRepository.class
+com/tb/inpost/dto/ProductDtoChat.class

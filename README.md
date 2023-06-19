@@ -37,7 +37,7 @@ Prerequisites:
 
 ```bash
 # clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+git clone https://github.com/crynusdrum/inpost.git
 
 # get into project folder
 cd inpost
@@ -46,13 +46,8 @@ cd inpost
 ./mvnw spring-boot:run
 ```
 
-## Front end web
-Pré-requisitos: npm / yarn
-
 
 # Autor
 
 Thiago Baldês
-
-https://www.linkedin.com/in/wmazoni
 

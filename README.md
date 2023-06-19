@@ -36,7 +36,7 @@ Prerequisites:
 - Spring Boot 3
 
 ```bash
-# clonar repositório
+# Github repository
 git clone https://github.com/crynusdrum/inpost.git
 
 # get into project folder
@@ -45,7 +45,15 @@ cd inpost
 # run the project
 ./mvnw spring-boot:run
 ```
+OR
+## Docker hub image
 
+```bash
+# Pull docker image
+docker pull crynusdrum/inpost:latest
+# Run the image
+docker run -p 8080:8080 crynusdrum/inpost
+```
 
 # Autor
 
